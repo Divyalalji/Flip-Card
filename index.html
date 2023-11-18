@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip-Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #123f52dc;
+            
+        }
+
+        .card {
+            height: 25rem;
+            width: 25rem;
+        }
+
+        .flipcard {
+            background-color: transparent;
+            height: 25rem;
+            width: 25rem;
+            perspective: 1000px;
+        }
+
+        .flipinner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flipcard:hover .flipinner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <h1 class="text-light display-2 text-decoration-underline fw-normal text-center"> Latest Packages</h1>
+        <div class="row d-flex flex-wrap gap-5 ms-4 mt-5">
+            <!-- 1st card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-1</h3>
+                    </div>
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card col-3 border-1" data-bs-theme="light">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $0</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>Single User</li>
+                                        <li>10 Download Per Month</li>
+                                        <li>Faster Files</li>
+                                        <li>25 Custom Packs</li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-dark mb-3">Subcribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-2</h3>
+                    </div>
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card  col-3 " data-bs-theme="dark">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $10</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>unlimited users</li>
+                                        <li>unlimited downloads</li>
+                                        <li>Fully-editable files</li>
+                                        <li>200+ custom packs</li>
+                                    </ul>
+
+
+                                </div>
+                                <button class="btn btn-light mb-3">Subcribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3rd card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary  flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-3</h3>
+                    </div>
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card col-3 border-1" data-bs-theme="light">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $30</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>unlimited users</li>
+                                        <li>unlimited downloads</li>
+                                        <li>Fully-editable files</li>
+                                        <li>500+ custom packs</li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-dark mb-3">Subcribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
